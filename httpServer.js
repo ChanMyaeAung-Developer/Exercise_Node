@@ -12,7 +12,7 @@ const server=http.createServer((req,res)=>{
  case '/home': 
         res.statusCode=301;
         res.setHeader("Location","/");
-      res.end();
+      
         break;
     case '/about':
         fileName='about.html';
@@ -20,7 +20,8 @@ const server=http.createServer((req,res)=>{
         case '/about-us': 
         res.statusCode=301;
         res.setHeader("Location","/about");
-        res.end();
+        return res.end();
+        
         break;
         
     default:
