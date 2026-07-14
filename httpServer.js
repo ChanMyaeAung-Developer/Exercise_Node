@@ -6,14 +6,13 @@ const server=http.createServer((req,res)=>{
    switch(req.url){
     case '/':
         fileName='home.html';
-        res.statusCode=200;
-        
+        res.statusCode=200; 
         break;
  case '/home': 
         res.statusCode=301;
         res.setHeader("Location","/");
-      
-        break;
+        return res.end();
+    
     case '/about':
         fileName='about.html';
         break;
@@ -22,7 +21,7 @@ const server=http.createServer((req,res)=>{
         res.setHeader("Location","/about");
         return res.end();
         
-        break;
+    
         
     default:
         fileName='404.html';
