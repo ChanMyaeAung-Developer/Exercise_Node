@@ -44,6 +44,7 @@ Thumbs.db
 # IDE files
 .vscode/
 .idea/
+.env/
 
 # ESLint cache
 .eslintcache
